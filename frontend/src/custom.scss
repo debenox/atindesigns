@@ -1,0 +1,10 @@
+// Override default variables before the import
+body {
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+$body-bg: #202324;
+$body-color: white;
+
+// Import Bootstrap and its default variables
+@import '~bootstrap/scss/bootstrap.scss';
