@@ -3,6 +3,8 @@ import { Row, Col, Container } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { listDesigns } from '../actions/housedesignActions';
 import Design from '../components/Design';
+import Loader from '../components/Loader';
+import Message from '../components/Message';
 
 const DesignScreen = () => {
   const dispatch = useDispatch();
@@ -16,16 +18,22 @@ const DesignScreen = () => {
 
   return (
     <>
-      <Container className="py-5">
-        <h2>Designs</h2>
+      <Container className="py-4">
         {loading ? (
-          <h2>Loading...</h2>
+          <Loader />
         ) : error ? (
-          <h2>{error} </h2>
+          <Message variant="danger">{error} </Message>
         ) : (
           <Row>
             {designs.map((design) => (
-              <Col key={design._id} sm={12} md={6} lg={4} xlg={3}>
+              <Col
+                className="pt-4"
+                key={design._id}
+                sm={12}
+                md={6}
+                lg={4}
+                xlg={3}
+              >
                 <Design design={design} />
               </Col>
             ))}

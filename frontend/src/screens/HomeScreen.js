@@ -9,7 +9,7 @@ const HomeScreen = () => {
           <div className="overlay d-flex  align-items-center">
             <Container>
               <h1 className="mx-auto text-center">
-                Are you looking to build/invest in real estate?{' '}
+                Are you looking to build/invest in real estate?
               </h1>
               <p className="mx-auto text-center pt-4">
                 Find ideas/projects here!

@@ -71,6 +71,10 @@ main {
   height: 500px;
 }
 
+.dining {
+  font-size: 200px !important;
+}
+
 footer h3 {
   font-weight: 700 !important;
   color: #7c7c7d;
